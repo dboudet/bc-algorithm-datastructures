@@ -18,7 +18,7 @@ console.log("Last element in last subarray:" , getLastElementInArray(testArray))
 function getLastElementInArray (array) {
     return array[array.length-1][array[array.length-1].length-1]
 }
-console.log("Last element in last subarray:" , getLastElementInArray(testArray))
+console.log("Last element in last subarray (not using variable):" , getLastElementInArray(testArray))
 
 //function to get given element of a subarray at index [][] of array passed as parameter
 const testArrayIndex = 3
@@ -30,15 +30,15 @@ console.log (`The element at index [${testArrayIndex}] [${testSubArrayIndex}] of
 
 //function to get the index of an element in a subarray where its element matches a value passed as a parameter
 const testValue = "z"
+
 function findIndexByValue (value,array) {
-    const subArray = array[i]
     for (let i=0; i<array.length; i++) {
+        const subArray = array[i]
         for (let j=0; j<subArray.length; j++) {
             if (subArray[j] === value){
-                return j
+                return "[" + i + "] " + "[" + j + "]"
             }
-            return i
         }
     }
 }
-console.log("The element ", testValue , "is at index:" , findIndexByValue(testValue,testArray))
+console.log("The element \"" + testValue + "\" is at index:" , findIndexByValue(testValue,testArray))
