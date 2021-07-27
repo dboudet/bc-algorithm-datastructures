@@ -32,3 +32,10 @@ function checkCart(item) {
 let newShoppingList = shoppingList.filter(checkCart)
 
 console.log(`Shopping List: \n ${shoppingList}\n In Cart: \n ${inCart} \n With Items in Cart Removed: \n ${newShoppingList}`)
+
+
+// TODD'S SOLUTION
+
+// function stillNeed(list,cart) {
+//     return list.filter( item => !cart.includes(item))
+// }
