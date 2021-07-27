@@ -20,16 +20,41 @@
 
 // NOT WORKING
 
-function sym() {
-    let bucket = []
-    arr1.forEach( () => {
-        for (let j=0; j<arr2.length; j++) {
-          if(arr1[i]===arr2[j]) {
-              bucket.push(arr1[i])
-          }
-        }
-    })
-    return bucket
-  }
+// function sym() {
+//     let bucket = []
+//     arr1.forEach( () => {
+//         for (let j=0; j<arr2.length; j++) {
+//           if(arr1[i]===arr2[j]) {
+//               bucket.push(arr1[i])
+//           }
+//         }
+//     })
+//     return bucket
+//   }
 
-  sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])
+
+// function sym(arr1,arr2) {
+//   let bucket = []
+//   arr1.forEach( num => {
+//     for (let j=0; j<arr2.length; j++) {
+//       if(num!==arr2[j]) {
+//         bucket.push(num)
+//       }
+//     }
+//   })
+// }
+
+
+function sym(arr1,arr2) {
+  let bucket  = []
+  for (let i=0; i<arr1.length; i++) {
+    arr2.forEach( (arr2, num) => {
+      if(arr1[i] != num) {
+        bucket.push(num)
+      }
+    })
+  }
+}
+// console.log( bucket )
+
+console.log(sym([1, 1, 2, 5], [2, 2, 3, 5]))
